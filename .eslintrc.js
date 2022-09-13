@@ -2,15 +2,16 @@ module.exports = {
   env: {
     commonjs: true,
     es2021: true,
-    node: true,
+    node: true
   },
   extends: ['plugin:prettier/recommended'],
   parserOptions: {
-    ecmaVersion: 12,
+    sourceType: 'module',
+    ecmaVersion: 'latest'
   },
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'error'
   },
   plugins: ['prettier'],
-  ignorePatterns: ['node_modules/'],
-};
+  ignorePatterns: ['node_modules/']
+}
