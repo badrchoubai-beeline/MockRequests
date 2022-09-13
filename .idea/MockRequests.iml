@@ -5,6 +5,11 @@
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/codeStyles" />
+      <excludeFolder url="file://$MODULE_DIR$/cli/.turbo" />
+      <excludeFolder url="file://$MODULE_DIR$/cli/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/server/.turbo" />
+      <excludeFolder url="file://$MODULE_DIR$/server/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
