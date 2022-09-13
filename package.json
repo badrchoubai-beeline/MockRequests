@@ -5,15 +5,15 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint",
-    "lint:format": "eslint --fix",
-    "lint:fix": "eslint --fix",
+    "lint": "eslint cli/ server/",
+    "lint:fix": "eslint cli/ server/ --fix",
     "run:prod": "node index.js",
     "run:dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js|ts|json}": "lint:fix",
+    "*": "test"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "eslint": "8.22.0",
-    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-prettier": "^4.2.1",
