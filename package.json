@@ -9,7 +9,6 @@
     "server"
   ],
   "scripts": {
-    "lint:fix": "eslint cli/ server/ --fix",
     "format": "prettier --write --plugin-search-dir=. \"**/*.{ts,md,json,js,mjs,cjs}\" --ignore-path .gitignore",
     "format:check": "prettier --check --plugin-search-dir=. \"**/*.{ts,md,json,js,mjs,cjs}\" --ignore-path .gitignore",
     "build": "turbo run build",
