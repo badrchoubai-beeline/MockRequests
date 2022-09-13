@@ -4,14 +4,18 @@
   "description": "",
   "type": "commonjs",
   "main": "index.js",
+  "workspaces": [
+    "cli",
+    "server"
+  ],
   "scripts": {
-    "lint": "eslint cli/ server/",
     "lint:fix": "eslint cli/ server/ --fix",
     "format": "prettier --write --plugin-search-dir=. \"**/*.{ts,md,json,js,mjs,cjs}\" --ignore-path .gitignore",
     "format:check": "prettier --check --plugin-search-dir=. \"**/*.{ts,md,json,js,mjs,cjs}\" --ignore-path .gitignore",
-    "cli": "node ./cli/index.js",
-    "cli:help": "node ./cli/index.js --help",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "dev": "turbo run dev"
   },
   "lint-staged": {
     "*.{js|ts|json}": "lint",
@@ -19,13 +23,10 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "commander": "^9.4.0",
-    "dotenv": "^16.0.2",
-    "express": "^4.18.1"
-  },
   "devDependencies": {
-    "eslint": "8.22.0",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
@@ -33,6 +34,8 @@
     "eslint-plugin-promise": "^6.0.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "turbo": "^1.4.6",
+    "typescript": "^4.8.3"
   }
 }

@@ -1,6 +1,6 @@
 module.exports = {
   '/health': {
-    get: (request, response, next) => {
+    get: (request, response) => {
       response.send('Healthy');
     }
   }

@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config()
 
 module.exports = {
   id: process.env.MOCKING_API,
@@ -11,8 +11,8 @@ module.exports = {
         return response.send({
           message: 'Hello, World!',
           warn: 'This is the default index route in config.js'
-        });
+        })
       }
     }
   }
-};
+}

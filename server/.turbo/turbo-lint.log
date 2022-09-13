@@ -1,0 +1,5 @@
+[35mserver:lint[0m: cache hit, replaying output [2me101ffbda2662bfe[0m
+[35mserver:lint: [0m
+[35mserver:lint: [0m> server@1.0.0 lint
+[35mserver:lint: [0m> eslint .
+[35mserver:lint: [0m
