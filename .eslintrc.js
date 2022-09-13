@@ -14,5 +14,5 @@ module.exports = {
     'prettier/prettier': 'error'
   },
   plugins: ['@typescript-eslint', 'prettier'],
-  ignorePatterns: ['node_modules/', "dist"]
+  ignorePatterns: ['node_modules/', 'dist']
 }

@@ -8,7 +8,6 @@ for (const route in config.routes) {
   const appRoute = app.route(route)
   const methods = config.routes[route]
   console.log(appRoute)
-  console.log(methods)
 }
 
 app.listen(config.port, () => {
