@@ -8,9 +8,9 @@
     "lint": "eslint cli/ server/",
     "lint:fix": "eslint cli/ server/ --fix",
     "format": "prettier --write --plugin-search-dir=. \"**/*.{ts,md,json,js,mjs,cjs}\" --ignore-path .gitignore",
-    "format:check": "prettier --check --plugin-search-dir=. \"**/*.{ts,md,json,js,mjs,cjs}\" --ignore-path .gitignore"
-    "run:prod": "node index.js",
-    "run:dev": "nodemon index.js",
+    "format:check": "prettier --check --plugin-search-dir=. \"**/*.{ts,md,json,js,mjs,cjs}\" --ignore-path .gitignore",
+    "cli": "node ./cli/index.js",
+    "cli:help": "node ./cli/index.js --help",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
@@ -33,6 +33,6 @@
     "eslint-plugin-promise": "^6.0.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "prettier": "2.7.1",
+    "prettier": "2.7.1"
   }
 }
