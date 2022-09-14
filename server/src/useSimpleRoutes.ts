@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 
-module.exports = {
-  '/*': {
+export const useSimpleRoutes = (apiPath?: string) => ({
+  [`/${apiPath}`]: {
     get: (request: Request, response: Response) => {
       response
         .send({
@@ -30,5 +30,10 @@ module.exports = {
         })
         .status(204)
     }
+  },
+  '/health': {
+    get: (request: Request, response: Response) => {
+      response.send('Healthy').status(200)
+    }
   }
-}
+})

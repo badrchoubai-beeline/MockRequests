@@ -4,10 +4,13 @@ import app from './app'
 const config = require('./.mockserver.js')
 
 // Setup routes
-for (const route in config.routes) {
-  const appRoute = app.route(route)
-  const methods = config.routes[route]
-  console.log(appRoute)
+for (const path in config.routes) {
+  const appRoute: any = app.route(path)
+  for (const method in config.routes[path]) {
+    const handler = config.routes[path][method]
+    appRoute[method](handler)
+    console.log(appRoute)
+  }
 }
 
 app.listen(config.port, () => {

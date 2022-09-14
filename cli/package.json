@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node index.ts",
-    "cli:help": "ts-node index.ts --help",
+    "dev": "ts-node src/index.ts",
+    "cli:help": "ts-node src/index.ts --help",
     "build": "tsc",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
